@@ -17,20 +17,28 @@ class ChapterDetail extends React.Component {
         this.setState ({chapter: res.data.data});
       });
   }
-  subUrl(str){
-    var index = str .lastIndexOf("\/")
-    str  = str .substring(0, index)
-    return str
+  subUrl (str) {
+    var index = str.lastIndexOf ('/');
+    str = str.substring (0, index);
+    return str;
   }
   render () {
-    let prevLink=null
-    let nextLink=null
-    var oriUrl=this.subUrl(this.props.match.url);
-    if(this.state.chapter.prev){
-        prevLink=<Link target="_href" to={`${oriUrl}/${this.state.chapter.prev}`}>上一页</Link>
+    let prevLink = null;
+    let nextLink = null;
+    var oriUrl = this.subUrl (this.props.match.url);
+    if (this.state.chapter.prev) {
+      prevLink = (
+        <Link target="_href" to={`${oriUrl}/${this.state.chapter.prev}`}>
+          上一页
+        </Link>
+      );
     }
-    if(this.state.chapter.next){
-        nextLink=<Link target="_href" to={`${oriUrl}/${this.state.chapter.next}`}>下一页</Link>
+    if (this.state.chapter.next) {
+      nextLink = (
+        <Link target="_href" to={`${oriUrl}/${this.state.chapter.next}`}>
+          下一页
+        </Link>
+      );
     }
     return (
       <div style={{width: '800px', margin: '0 auto', padding: '50px 0 50px 0'}}>
@@ -42,7 +50,7 @@ class ChapterDetail extends React.Component {
             textAlign: 'center',
           }}
         >
-        {prevLink}{" "}{nextLink}
+          {prevLink}{' '}{nextLink}
         </div>
       </div>
     );
