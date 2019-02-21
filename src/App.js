@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Book from "./components/Book"
 import Chapter from "./components/Chapter"
 import ChapterDetail from "./components/ChapterDetail"
+import './App.css';
 
 const SidebarExample=()=>(
   <Router>

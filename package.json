@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.13.5",
     "axios": "^0.18.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
@@ -24,5 +25,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy":"http://localhost:9999/"
+  "proxy": "http://localhost:9999/"
 }
