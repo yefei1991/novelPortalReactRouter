@@ -34,7 +34,13 @@ class ChapterDetail extends React.Component {
   render () {
     let prevLink = null;
     let nextLink = null;
+    let chapterLink=null;
     var oriUrl = this.subUrl (this.props.match.url);
+    chapterLink=(
+      <Link target="_href" to={`${oriUrl}`}>
+          章节目录
+      </Link>
+    )
     if (this.state.chapter.prev) {
       prevLink = (
         <Link target="_href" to={`${oriUrl}/${this.state.chapter.prev}`}>
@@ -66,7 +72,7 @@ class ChapterDetail extends React.Component {
               textAlign: 'center'
             }}
           >
-            {prevLink}{' '}{nextLink}
+            {prevLink}{' '}{chapterLink}{' '}{nextLink}
           </div>
         </div>
       </Spin>
